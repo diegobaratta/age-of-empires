@@ -7,7 +7,8 @@ function App() {
   useEffect(() => {
       const fetchCivs = async () => {       
 
-          const response = await fetch("https://thingproxy.freeboard.io/fetch/https://age-of-empires-2-api.herokuapp.com/api/v1/civilizations")
+          // const response = await fetch("https://thingproxy.freeboard.io/fetch/https://age-of-empires-2-api.herokuapp.com/api/v1/civilizations")
+          const response = await fetch("https://age-of-empires-2-api.herokuapp.com/api/v1/civilizations")
           const {civilizations} = await response.json()            
           
           setCivs(civilizations.map(civ => (
